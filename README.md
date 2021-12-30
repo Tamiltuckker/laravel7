@@ -73,6 +73,40 @@ Here are the routes
 
 - Add Username field in Register blade 
 
+## User Roles and Permissions
+
+**About:**
+
+- Spatie role permission composer package provide way to create acl in laravel 6. they provide how to assign role to user, how to assign permission to user and how to assign permission assign to roles. i will write step by step creating roles and permissions in laravel 6 application.
+
+- [Spatie permission Article](https://www.itsolutionstuff.com/post/laravel-6-user-roles-and-permissions-from-scratch-laravel-6-aclexample.html).
+
+**Install Composer Packages**
+
+- composer require spatie/laravel-permission
+- composer require laravelcollective/html
+
+**After this command:**
+    
+- [composer.json]-"spatie/laravel-permission": "^5.4" (newly added)
+- [composer.lock]-"name": "spatie/laravel-permission"(newly added)
+
+- [composer.json]-"laravelcollective/html": "^6.2" (newly added)
+- [composer.lock]-"name": "laravelcollective/html" (newly added)
+
+**config/app.php**
+
+- Add below providers => [Spatie\Permission\PermissionServiceProvider::class,]
+**Terminal**
+
+- php artisan config:cache
+- php artisan vendor:publish --provider="Spatie\Permission\PermissionServiceProvider"
+- php artisan migrate
+ - kindly follow  abobe artive for all...
+
+
+
+
 
 **
 
