@@ -52,3 +52,29 @@ Here are the routes
 
 - php artisan route:list
 
+## Added username (or) Email Authentication:
+## Followed this steps:
+
+- Laravel has created default login blade file. we need to add comman username field on it and remove email field.
+
+**Migrations and model**
+
+- php artisan make:migration add_username_to_users_table --table=users
+- php artisan migrtae
+- In User  model file add  to username field.
+
+**Controller**
+
+- Login[Add findUsername() and username() function then add to this function in consrtuct method]
+- Register [Add username field]
+
+**Blade**
+- [resources/views/auth/login.blade.php](https://www.codecheef.org/article/laravel-auth-login-with-email-or-username-in-one-field).
+
+- Add Username field in Register blade 
+
+
+**
+
+
+
